@@ -1,14 +1,15 @@
 const sonarqubeScanner = require('sonarqube-scanner');
 
 sonarqubeScanner({
-  serverUrl: 'http:',
+  serverUrl: 'http://3.129.211.90:9000',
     options : {
       'sonar.projectDescription': 'This is Node JS Application',
-      'sonar.projectName': 'nodejs-hello',
-      'sonar.projectKey': 'NodeJSHello',
-      'sonar.login': 'admin',
-      'sonar.password': 'admin',
+      'sonar.projectName': 'nodejs-app',
+      'sonar.projectKey': 'nodejs-app',
+      'sonar.sourceEncoding: 'UTF-8',
+      'sonar.login': 'c23708428b7f543c971c13e2d05d3f4f2e0f773b',
       'sonar.language': 'js',
       'sonar.sources': '.',
+      'sonar.javascript.lcov.reportPaths': 'coverage/lcov.info',
     },
 }, () => {});
